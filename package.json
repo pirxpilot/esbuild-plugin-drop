@@ -1,0 +1,32 @@
+{
+  "name": "esbuild-plugin-drop",
+  "version": "0.0.0",
+  "description": "Like drop console but for assert/debug",
+  "author": {
+    "name": "Damian Krzeminski",
+    "email": "pirxpilot@furkot.com",
+    "url": "https://pirxpilot.me"
+  },
+  "repository": "pirxpilot/esbuild-plugin-drop",
+  "license": "Apache-2.0",
+  "keywords": [
+    "esbuild-plugin-drop",
+    "esbuild",
+    "plugin",
+    "unassert",
+    "unassertify",
+    "undebugify"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "jshint": "~2",
+    "tape": "~5"
+  },
+  "scripts": {
+    "test": "make check"
+  },
+  "files": [
+    "index.js",
+    "lib"
+  ]
+}
