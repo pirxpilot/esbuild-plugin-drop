@@ -17,7 +17,9 @@
     "undebugify"
   ],
   "dependencies": {
-    "mini-unassert": "^1.1.0"
+    "estree-is-require": "^1.0.0",
+    "scope-analyzer": "^2.1.2",
+    "transform-ast": "^2.4.4"
   },
   "devDependencies": {
     "esbuild": "^0.14.48",
