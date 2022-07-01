@@ -20,11 +20,27 @@ test('must drop assert', async function (t) {
   t.equal(transformed, expected);
 });
 
-async function build(sourceName) {
+test('must drop assert and debug', async function (t) {
+  const sourceName = resolve(__dirname, 'fixtures', 'app/index.js');
+  const expectedName = resolve(__dirname, 'fixtures', 'app.esbuild.js');
+
+  const [
+    transformed,
+    expected,
+  ] = await Promise.all([
+    build(sourceName, { bundle: true, format: 'esm' }, { modules: ['assert','debug'] }),
+    readFile(expectedName, 'utf-8')
+  ]);
+
+  t.equal(transformed, expected);
+});
+
+async function build(sourceName, buildOpts = {}, pluginOpts = {}) {
   const { outputFiles } = await esbuild.build({
     entryPoints: [sourceName],
-    plugins: [drop()],
-    write: false
+    plugins: [drop(pluginOpts)],
+    write: false,
+    ...buildOpts
   });
 
   return outputFiles[0].text;
