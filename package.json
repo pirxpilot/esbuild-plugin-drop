@@ -22,7 +22,7 @@
     "transform-ast": "^2.4.4"
   },
   "devDependencies": {
-    "esbuild": "^0.14.48",
+    "esbuild": "^0.16.3",
     "jshint": "~2",
     "tape": "~5"
   },
