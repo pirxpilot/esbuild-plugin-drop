@@ -17,9 +17,11 @@
     "undebugify"
   ],
   "dependencies": {
+    "acorn": "^8.8.1",
+    "dash-ast": "^2.0.1",
     "estree-is-require": "^1.0.0",
-    "scope-analyzer": "^2.1.2",
-    "transform-ast": "^2.4.4"
+    "magic-string": "^0.27.0",
+    "scope-analyzer": "^2.1.2"
   },
   "devDependencies": {
     "esbuild": "^0.16.3",
