@@ -20,6 +20,22 @@ test('must drop assert', async function (t) {
   t.equal(transformed, expected);
 });
 
+test('must drop assert when minifying', async function (t) {
+  const sourceName = resolve(__dirname, 'fixtures', 'big.js');
+  const expectedName = resolve(__dirname, 'fixtures', 'big.esbuild.js');
+
+  const [
+    transformed,
+    expected,
+  ] = await Promise.all([
+    build(sourceName, { minify: true }),
+    readFile(expectedName, 'utf-8')
+  ]);
+
+  t.equal(transformed, expected);
+});
+
+
 test('must drop assert and debug', async function (t) {
   const sourceName = resolve(__dirname, 'fixtures', 'app/index.js');
   const expectedName = resolve(__dirname, 'fixtures', 'app.esbuild.js');
