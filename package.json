@@ -1,6 +1,6 @@
 {
   "name": "esbuild-plugin-drop",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Like drop console but for assert/debug",
   "author": {
     "name": "Damian Krzeminski",
