@@ -47,7 +47,7 @@ Apache-2.0 © 2018 [Renée Kooi](mailto:renee@kooi.me)
 [npm-url]: https://npmjs.org/package/esbuild-plugin-drop
 
 [build-url]: https://github.com/pirxpilot/esbuild-plugin-drop/actions/workflows/check.yaml
-[build-image]: https://img.shields.io/github/workflow/status/pirxpilot/esbuild-plugin-drop/check
+[build-image]: https://img.shields.io/github/actions/workflow/status/pirxpilot/esbuild-plugin-drop/check.yaml
 
 [deps-image]: https://img.shields.io/librariesio/release/npm/esbuild-plugin-drop
 [deps-url]: https://libraries.io/npm/esbuild-plugin-drop
