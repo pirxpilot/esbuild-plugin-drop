@@ -43,11 +43,11 @@ Apache-2.0 © 2018 [Renée Kooi](mailto:renee@kooi.me)
 [esbuild plugin]: https://esbuild.github.io/plugins/#using-plugins
 [mini-unassert]: https://npmjs.org/package/mini-unassert
 
-[npm-image]: https://img.shields.io/npm/v/esbuild-plugin-drop.svg
+[npm-image]: https://img.shields.io/npm/v/esbuild-plugin-drop
 [npm-url]: https://npmjs.org/package/esbuild-plugin-drop
 
 [build-url]: https://github.com/pirxpilot/esbuild-plugin-drop/actions/workflows/check.yaml
-[build-image]: https://img.shields.io/github/actions/workflow/status/pirxpilot/esbuild-plugin-drop/check.yaml
+[build-image]: https://img.shields.io/github/actions/workflow/status/pirxpilot/esbuild-plugin-drop/check.yaml?branch=main
 
 [deps-image]: https://img.shields.io/librariesio/release/npm/esbuild-plugin-drop
 [deps-url]: https://libraries.io/npm/esbuild-plugin-drop
