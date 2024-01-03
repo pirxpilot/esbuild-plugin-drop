@@ -18,6 +18,7 @@ test('must drop assert', async function (t) {
   ]);
 
   t.equal(transformed, expected);
+  t.end();
 });
 
 test('must drop assert when minifying', async function (t) {
@@ -33,6 +34,7 @@ test('must drop assert when minifying', async function (t) {
   ]);
 
   t.equal(transformed, expected);
+  t.end();
 });
 
 
@@ -49,6 +51,7 @@ test('must drop assert and debug', async function (t) {
   ]);
 
   t.equal(transformed, expected);
+  t.end();
 });
 
 async function build(sourceName, buildOpts = {}, pluginOpts = {}) {

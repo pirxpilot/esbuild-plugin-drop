@@ -16,6 +16,7 @@ test.skip('must drop assert', async function (t) {
   const transformed = drop(source, ['assert']);
 
   t.equal(transformed, expected);
+  t.end();
 });
 
 test('must drop debug', async function (t) {
@@ -30,4 +31,5 @@ test('must drop debug', async function (t) {
   const transformed = drop(source, ['debug']);
 
   t.equal(transformed, expected);
+  t.end();
 });
