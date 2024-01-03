@@ -24,8 +24,8 @@
     "scope-analyzer": "^2.1.2"
   },
   "devDependencies": {
-    "esbuild": "^0.16.3",
-    "jshint": "~2"
+    "@pirxpilot/jshint": "~3",
+    "esbuild": "^0.16.3"
   },
   "scripts": {
     "test": "make check"
