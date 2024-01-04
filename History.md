@@ -1,4 +1,11 @@
 
+1.1.0 / 2024-01-04
+==================
+
+ * add support for dropping imports in ESM modules
+ * upgrade dependencies
+ * replace `tape` with `node:test`
+
 1.0.0 / 2022-12-10
 ==================
 
