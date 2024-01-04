@@ -5,7 +5,7 @@ const { readFile } = require('fs').promises;
 
 const drop = require('../');
 
-test('must drop assert', async function (t) {
+test('must drop assert require', async function (t) {
   const sourceName = resolve(__dirname, 'fixtures', 'assert.js');
   const expectedName = resolve(__dirname, 'fixtures', 'assert.esbuild.js');
 
@@ -18,6 +18,39 @@ test('must drop assert', async function (t) {
   ]);
 
   t.equal(transformed, expected);
+  t.end();
+});
+
+test('must drop assert import', async function (t) {
+  const sourceName = resolve(__dirname, 'fixtures', 'assert.mjs');
+  const expectedName = resolve(__dirname, 'fixtures', 'assert.esbuild.mjs');
+
+  const [
+    transformed,
+    expected,
+  ] = await Promise.all([
+    build(sourceName, {}, { sourceType: 'module' }),
+    readFile(expectedName, 'utf-8')
+  ]);
+
+  t.equal(transformed, expected);
+  t.end();
+});
+
+test('must drop assert require if source type is module', async function (t) {
+  const sourceName = resolve(__dirname, 'fixtures', 'assert.js');
+  const expectedName = resolve(__dirname, 'fixtures', 'assert.esbuild.js');
+
+  const [
+    transformed,
+    expected,
+  ] = await Promise.all([
+    build(sourceName, {}, { sourceType: 'module' }),
+    readFile(expectedName, 'utf-8')
+  ]);
+
+  t.equal(transformed, expected);
+  t.end();
 });
 
 test('must drop assert when minifying', async function (t) {
@@ -33,6 +66,7 @@ test('must drop assert when minifying', async function (t) {
   ]);
 
   t.equal(transformed, expected);
+  t.end();
 });
 
 
@@ -49,6 +83,7 @@ test('must drop assert and debug', async function (t) {
   ]);
 
   t.equal(transformed, expected);
+  t.end();
 });
 
 async function build(sourceName, buildOpts = {}, pluginOpts = {}) {
