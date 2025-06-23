@@ -1,4 +1,10 @@
 
+1.1.1 / 2025-06-23
+==================
+
+ * upgrade esbuild
+ * use `biome` as a linter and formatter
+
 1.1.0 / 2024-01-04
 ==================
 
