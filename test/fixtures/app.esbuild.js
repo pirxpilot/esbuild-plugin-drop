@@ -1,5 +1,5 @@
 var __getOwnPropNames = Object.getOwnPropertyNames;
-var __commonJS = (cb, mod2) => function __require() {
+var __commonJS = (cb, mod2) => function() {
   return mod2 || (0, cb[__getOwnPropNames(cb)[0]])((mod2 = { exports: {} }).exports, mod2), mod2.exports;
 };
 

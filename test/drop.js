@@ -1,15 +1,12 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
-const { resolve } = require('path');
-const { readFile } = require('fs').promises;
+const { resolve } = require('node:path');
+const { readFile } = require('node:fs/promises');
 
 const drop = require('../lib/drop');
 
-test('must drop assert', async function () {
-  const tasks = [
-    'assert.js',
-    'assert.drop.js'
-  ]
+test('must drop assert', async () => {
+  const tasks = ['assert.js', 'assert.drop.js']
     .map(name => resolve(__dirname, 'fixtures', name))
     .map(path => readFile(path, 'utf-8'));
 
@@ -19,11 +16,8 @@ test('must drop assert', async function () {
   assert.equal(transformed, expected);
 });
 
-test('must drop debug', async function () {
-  const tasks = [
-    'debug.js',
-    'debug.drop.js'
-  ]
+test('must drop debug', async () => {
+  const tasks = ['debug.js', 'debug.drop.js']
     .map(name => resolve(__dirname, 'fixtures', name))
     .map(path => readFile(path, 'utf-8'));
 
