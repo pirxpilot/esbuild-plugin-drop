@@ -11,7 +11,10 @@ test('must drop assert require', async () => {
   const sourceName = resolve(__dirname, 'fixtures', 'assert.js');
   const expectedName = resolve(__dirname, 'fixtures', 'assert.esbuild.js');
 
-  const [transformed, expected] = await Promise.all([build(sourceName), readFile(expectedName, 'utf-8')]);
+  const [transformed, expected] = await Promise.all([
+    build(sourceName, { minifySyntax: true }),
+    readFile(expectedName, 'utf-8')
+  ]);
 
   assert.equal(transformed, expected);
 });
@@ -21,7 +24,7 @@ test('must drop assert import', async () => {
   const expectedName = resolve(__dirname, 'fixtures', 'assert.esbuild.mjs');
 
   const [transformed, expected] = await Promise.all([
-    build(sourceName, {}, { sourceType: 'module' }),
+    build(sourceName, { minifySyntax: true }, { sourceType: 'module' }),
     readFile(expectedName, 'utf-8')
   ]);
 
@@ -33,7 +36,7 @@ test('must drop assert require if source type is module', async () => {
   const expectedName = resolve(__dirname, 'fixtures', 'assert.esbuild.js');
 
   const [transformed, expected] = await Promise.all([
-    build(sourceName, {}, { sourceType: 'module' }),
+    build(sourceName, { minifySyntax: true }, { sourceType: 'module' }),
     readFile(expectedName, 'utf-8')
   ]);
 
@@ -57,7 +60,7 @@ test('must drop assert and debug', async () => {
   const expectedName = resolve(__dirname, 'fixtures', 'app.esbuild.js');
 
   const [transformed, expected] = await Promise.all([
-    build(sourceName, { bundle: true, format: 'esm' }, { modules: ['assert', 'debug'] }),
+    build(sourceName, { minifySyntax: true, bundle: true, format: 'esm' }, { modules: ['assert', 'debug'] }),
     readFile(expectedName, 'utf-8')
   ]);
 
