@@ -1,4 +1,9 @@
 
+1.2.0 / 2025-07-24
+==================
+
+ * remove `sourceType` option - plugin will now detect ESM modules automatically
+
 1.1.1 / 2025-06-23
 ==================
 
