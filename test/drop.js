@@ -26,3 +26,14 @@ test('must drop debug', async () => {
 
   assert.equal(transformed, expected);
 });
+
+test('must drop debug import', async () => {
+  const tasks = ['debug.mjs', 'debug.drop.mjs']
+    .map(name => resolve(__dirname, 'fixtures', name))
+    .map(path => readFile(path, 'utf-8'));
+
+  const [source, expected] = await Promise.all(tasks);
+  const transformed = drop(source, ['debug']);
+
+  assert.equal(transformed, expected);
+});
