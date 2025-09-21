@@ -1,4 +1,10 @@
 
+1.2.2 / 2025-09-20
+==================
+
+ * fix removal of `debug` in ES modules
+ * switch off biome checks for `test/fixtures`
+
 1.2.1 / 2025-08-23
 ==================
 
